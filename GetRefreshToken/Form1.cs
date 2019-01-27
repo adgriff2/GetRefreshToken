@@ -13,6 +13,7 @@ using System.Net;
 //using Newtonsoft.Json.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace GetRefreshToken
 {
@@ -78,13 +79,14 @@ namespace GetRefreshToken
             //populate checkedListBox with current scopes
             using (HttpClient scopesClient = new HttpClient())
             {
-                string returnString = await scopesClient.GetStringAsync("https://esi.tech.ccp.is/latest/swagger.json?datasource=tranquility");
+                string returnString = await scopesClient.GetStringAsync("https://esi.evetech.net/latest/swagger.json?datasource=tranquility");
                 List<string> scopes = ((Dictionary<string, object>)((Dictionary<string, object>)((Dictionary<string, object>)((Dictionary<string, object>)
                     JsonHelper.Deserialize(returnString))
                     .Where(o => o.Key == "securityDefinitions").FirstOrDefault().Value)
                     .Where(o => o.Key == "evesso").FirstOrDefault().Value)
                     .Where(o => o.Key == "scopes").FirstOrDefault().Value)
                     .Select(o => o.Key).ToList();
+                scopes.ForEach(o => Debug.Print(o));
                 checkedListBox1.Items.AddRange(scopes.ToArray());
             }
         }

@@ -36,7 +36,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -111,20 +110,12 @@
             // checkedListBox1
             // 
             this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(591, 32);
+            this.checkedListBox1.Location = new System.Drawing.Point(601, 0);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(479, 424);
+            this.checkedListBox1.Size = new System.Drawing.Size(479, 470);
             this.checkedListBox1.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(587, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Scopes";
             // 
             // textBox4
             // 
@@ -207,7 +198,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
@@ -234,7 +224,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
